@@ -14,7 +14,7 @@ const saveDataKassa = async (req, res, next) => {
     amount: amount,
     account: 1,
   });
-  res.status(200).render("payme", data, merchant_id);
+  res.status(200).render("payme", { data: data, merchant_id: merchant_id });
 };
 
 module.exports = {
