@@ -110,6 +110,8 @@ const RegisterData = catchErrorAsync(async (req, res, next) => {
     phone_active: !isEmail,
     email_active: isEmail,
   };
+
+  const data = await User.create(datas);
   res.status(200).json({
     status: "Succes",
     data: datas,

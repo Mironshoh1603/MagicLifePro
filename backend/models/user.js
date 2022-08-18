@@ -4,8 +4,8 @@ const validator = require("validator");
 const userSchema = new mongoose.Schema(
   {
     account_id: {
-      type: mongoose.Schema.ObjectId,
-      ref: "accounts",
+      type: String,
+      // ref: "accounts",
     },
     name: {
       type: String,

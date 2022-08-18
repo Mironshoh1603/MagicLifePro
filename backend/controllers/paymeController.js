@@ -1,4 +1,13 @@
-const CheckPreformTransaction = async (req, res, next) => {};
+const CheckPreformTransaction = async (req, res, next) => {
+  const id = req.body.params.account.id;
+  if (id != 1) {
+    res.status(200).json({
+      result: {
+        allow: -31050,
+      },
+    });
+  }
+};
 const CreateTransaction = async (req, res, next) => {};
 const PreformTransaction = async (req, res, next) => {};
 const CancelTransaction = async (req, res, next) => {};
